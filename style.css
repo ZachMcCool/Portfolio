@@ -1,5 +1,5 @@
 body {
-    width: 100%;
+    min-width: fit-content;
     font-family: 'Roboto', sans-serif;
     background-color: grey;
 }
@@ -47,6 +47,8 @@ body {
     /* border: 1px solid green; */
 }
 
+
+
 .subTitle {
     text-align: center;
     font-size: 3rem;
@@ -76,8 +78,9 @@ body {
 }
 
 .jumbo-container{
-    width: 80%;
+    width: 100%;
     height: 100%;
+    padding-bottom: 2rem;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -105,6 +108,8 @@ text-align: center;
 	width: 200px;
 	margin-top: 40px;
 	margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 	padding-top: 10px;
 	padding-right: 10px;
 	padding-bottom: 0px;
@@ -121,6 +126,14 @@ text-align: center;
     text-decoration: none;
     font-size: 1.2rem;
 	
+}
+
+.buttonsFlex{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 .jumbo-button:hover {
 	background-color: #FEFEFE;
@@ -150,7 +163,7 @@ text-align: center;
     height: 120vh;
     background-size: cover;
     height: 100vh;
-    width: 100%;
+    width: 80%;
     height: fit-content;
     margin: auto;
     display: flex;
@@ -167,9 +180,11 @@ text-align: center;
 .custom-card {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    width: 25%;
-    height: 35%;
+    width: 250px;
+    height: fit-content;
     color: black;
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.25);
@@ -240,6 +255,7 @@ text-align: center;
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    flex-flow: wrap;
     flex-direction: row;
     justify-content: space-evenly;
     padding-bottom: 10rem;
@@ -328,4 +344,104 @@ resize: none;
 	background-color: #FEFEFE;
 	color: #C4C4C4;
 	cursor: pointer;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 700px)
+{
+.title
+{
+    font-size: 2rem;
+}
+
+.subTitle{
+    font-size: 1.5rem;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-rows: 2;
+    grid-template-columns: 3;
+    width: 350px;
+    text-align: center;
+
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.input50 {
+width: 350px;
+padding: 10px;
+margin: 10px;
+border: 2px solid white;
+background-color: rgba(0, 0, 0, 0.25);
+color: white;
+}
+
+.input100 {
+width: 350px;
+padding: 10px;
+margin: 10px;
+border: 0;
+border: 2px solid white;
+background-color: rgba(0, 0, 0, 0.25);
+color: white;
+}
+
+.message {
+width: 350px;
+height: 200px;
+padding: 10px;
+margin: 10px;
+box-sizing: border-box;
+
+border: 0;
+border: 2px solid white;
+background-color: rgba(0, 0, 0, 0.25);
+color: white;
+resize: none;
+}
+
+.submit {
+    width: 200px;
+	margin-top: 40px;
+	margin: 35px;
+	margin-bottom: 2rem;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	text-align: center;
+	vertical-align: middle;
+	text-transform: uppercase;
+	font-weight: bold;
+	background-color: transparent;
+	border: 3px solid #FFFFFF;
+	color: #FFFFFF;
+	transition: all 0.3s linear;
+	display:inline-block;
+    text-decoration: none;
+    font-size: 1.rem;
+    rgba: (0, 0, 0, 0.25);
+}
+
+.submit:hover {
+	background-color: #FEFEFE;
+	color: #C4C4C4;
+	cursor: pointer;
+}
+
+.buttonsFlex{
+    flex-direction: column;
+}
+
+.jumbotron {
+    height: fit-content;
+}
 }
